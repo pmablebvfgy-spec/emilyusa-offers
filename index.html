@@ -1,1 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exclusive US Deals & Rewards 2026</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #0b5ed7;
+            --accent-color: #ff6b00;
+            --accent-hover: #e05e00;
+            --bg-light: #f8f9fa;
+            --text-dark: #212529;
+            --text-muted: #6c757d;
+            --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+        }
+
+        .usa-badge {
+            background: #e6f0ff;
+            color: var(--primary-color);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 40px 20px 30px;
+            background: linear-gradient(135deg, #0d6efd 0%, #004085 100%);
+            color: white;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 30px;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 20px;
+        }
+
+        .timer-container {
+            background: rgba(255, 255, 255, 0.15);
+            display: inline-block;
+            padding: 10px 25px;
+            border-radius: 30px;
+            backdrop-filter: blur(5px);
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .timer {
+            color: #ffda6a;
+            font-weight: 700;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 40px 0 20px;
+            font-size: 28px;
+            color: var(--text-dark);
+        }
+
+        .offers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .offer-card {
+            background: #ffffff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #eef2f5;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .offer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-tag {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: #28a745;
+            color: white;
+            padding: 4px 10px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+
+        .card-img-container {
+            position: relative;
+            height: 180px;
+            background-color: #eef2f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .offer-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .offer-desc {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .btn-cta {
+            display: block;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 8px;
+            transition: background-color 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-cta:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .trust-section {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: var(--card-shadow);
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .trust-features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .feature-item {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .feature-item i {
+            font-size: 32px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: #111827;
+            color: #9ca3af;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 13px;
+        }
+
+        footer a {
+            color: #d1d5db;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 26px; }
+            .hero p { font-size: 15px; }
+            .offers-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            USA REWARDS CLUB <span class="usa-badge"><i class="fas fa-flag-usa"></i> US Only</span>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Claim Your Exclusive US Rewards Today!</h1>
+            <p>Complete simple tasks, surveys, or sign-ups to get access to top-tier gift cards, electronics, and cash rewards.</p>
+            <div class="timer-container">
+                <i class="far fa-clock"></i> Limited Time Offers Expire In: <span class="timer" id="timer">14:59</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <h2 class="section-title">Featured Top Offers</h2>
+
+        <div class="offers-grid">
+
+            <div class="offer-card">
+                <div class="card-img-container">
+                    <span class="card-tag">Free Gift Card</span>
+                    <img src="https://via.placeholder.com/400x200/0d6efd/ffffff?text=750+PayPal+Gift+Card" alt="Offer 1">
+                </div>
+                <div class="card-body">
+                    <h3 class="offer-title">$750 PayPal Gift Card</h3>
+                    <p class="offer-desc">Enter your email and basic details to take part in our official US survey program.</p>
+                    <a href="YOUR_CPA_AFFILIATE_LINK_HERE" target="_blank" class="btn-cta">Claim Reward Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="offer-card">
+                <div class="card-img-container">
+                    <span class="card-tag">Popular</span>
+                    <img src="https://via.placeholder.com/400x200/ff6b00/ffffff?text=Amazon+1000+Reward" alt="Offer 2">
+                </div>
+                <div class="card-body">
+                    <h3 class="offer-title">$1,000 Amazon Shopping Spree</h3>
+                    <p class="offer-desc">Complete a quick registration to claim your chance for an Amazon Gift Voucher.</p>
+                    <a href="YOUR_CPA_AFFILIATE_LINK_HERE" target="_blank" class="btn-cta">Claim Reward Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="offer-card">
+                <div class="card-img-container">
+                    <span class="card-tag">Trending</span>
+                    <img src="https://via.placeholder.com/400x200/28a745/ffffff?text=Win+iPhone+15+Pro" alt="Offer 3">
+                </div>
+                <div class="card-body">
+                    <h3 class="offer-title">Win iPhone 15 Pro Max</h3>
+                    <p class="offer-desc">Submit your zip code to test new devices and qualify for free electronics giveaways.</p>
+                    <a href="YOUR_CPA_AFFILIATE_LINK_HERE" target="_blank" class="btn-cta">Claim Reward Now <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <section class="trust-section">
+            <h3>Why Millions Trust Our Rewards</h3>
+            <div class="trust-features">
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>100% Secure</h4>
+                    <p>Verified promotional network.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-bolt"></i>
+                    <h4>Fast Access</h4>
+                    <p>Instant digital reward delivery.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-users"></i>
+                    <h4>US Verified</h4>
+                    <p>Exclusively for US residents.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Rewards Promo Hub. All Rights Reserved.</p>
+            <p style="margin-top: 10px;">
+                <a href="#">Privacy Policy</a> | 
+                <a href="#">Terms of Service</a> | 
+                <a href="#">Contact Us</a>
+            </p>
+            <p style="font-size: 11px; margin-top: 15px; color: #6b7280;">
+                Disclaimer: This site is an independent promotional portal and is not affiliated with or endorsed by PayPal, Amazon, or Apple. All trademarks belong to their respective owners.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function startTimer(duration, display) {
+            let timer = duration, minutes, seconds;
+            setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+
+                display.textContent = minutes + ":" + seconds;
+
+                if (--timer < 0) {
+                    timer = duration;
+                }
+            }, 1000);
+        }
+
+        window.onload = function () {
+            let fifteenMinutes = 60 * 15,
+                display = document.querySelector('#timer');
+            startTimer(fifteenMinutes, display);
+        };
+    </script>
+
+</body>
+                      </html>
 
